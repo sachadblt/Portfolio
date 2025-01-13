@@ -41,22 +41,67 @@
 	</nav>
 	<br><br>
 	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner">
-		<div class="overlay"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t js-fullheight">
+					<div class="display-t js-fullheight">
+						<div data-animate-effect="fadeIn">
+							<div class="image-container">
+								<img src="images/photoNom.png" alt="Sacha DOUBLET" class="responsive-img">
+								<div class="alternate-content">
+									<img src="images/alternatePhotoNom.png" alt="Sacha DOUBLET">
+									<h1 class="title-effect main-title">Sacha DOUBLET</h1>
+									<h2>Développeur Full-Stack</h2>
+									<h3>Etudiant en 2ème année à l'IUT informatique de Montpellier-Sète</h3>
+								</div>
+							</div>
+							<script>
+								const responsiveImg = document.querySelector('.responsive-img');
+								const alternateContent = document.querySelector('.alternate-content');
+
+								function handleResize() {
+									if (window.innerWidth <= 800) { // Si la largeur d'écran est petite
+										responsiveImg.style.display = 'none';
+										alternateContent.style.display = 'block';
+									} else {
+										responsiveImg.style.display = 'block';
+										alternateContent.style.display = 'none';
+									}
+								}
+
+								// Initial check + on resize
+								window.addEventListener('resize', handleResize);
+								handleResize();
+							</script>
+
+							<p>
+                            <a class="btn btn-primary btn-lg btn-demo" href="#projects">Voir mes projets</a>
+                            <a href="ressources/CV%20Sacha%20Doublet.pdf" class="btn btn-primary btn-lg" download>Télécharger mon CV</a>
+                            <a href="#contact" class="btn btn-primary btn-lg btn-learn">Me Contacter</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	</div>
+	</div>
+</header>
+
+	<div id="fh5co-about" class="animate-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div  data-animate-effect="fadeIn">
-							<h1 class="title-effect main-title">Sacha DOUBLET</h1>
-							<h2>Développeur Full-Stack</h2>
-							<h3>Etudiant en 2ème année à l'IUT informatique de Montpellier-Sète</h3>
-							<p><a class="btn btn-primary btn-lg btn-demo" href="#projects">Voir Projets</a> <a href="#contact" class="btn btn-primary btn-lg btn-learn">Me Contacter</a></p>
-						</div>
+					<div class="about-content">
+						<h2 class="title-effect">Qui suis-je ?</h2>
+						<p class="lead">Passionné de technologie et de création numérique, je suis Sacha DOUBLET, un développeur Full-Stack en devenir. Mon parcours à l'IUT de Montpellier-Sète m'a doté d'une solide base technique, tandis que mes expériences professionnelles variées ont forgé ma capacité d'adaptation et ma créativité.</p>
+						<p>Je transforme des idées en solutions concrètes, en combinant rigueur technique et approche innovante. Toujours à l'affût des dernières tendances technologiques, je m'efforce de repousser les limites de ce qui est possible dans le monde numérique.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-	</header>
+	</div>
 
 	<div id="fh5co-features">
 		<div class="container">
@@ -102,38 +147,78 @@
 	<br>
 	<br>
 
-	<div id="projects" class="fh5co-blog">
+	<div id="projects" class="fh5co-blog" style="text-align: center;">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2 class="title-effect section-title">Projets Réalisés</h2>
+					<p>Explorez quelques-uns de mes projets personnels et universitaires, illustrant mes compétences en développement logiciel, jeux vidéo, et intelligence artificielle.</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="fh5co-blog animate-box">
+			<div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+				<!-- Projet 1 -->
+				<div class="col-md-4 d-flex justify-content-center">
+					<div class="fh5co-blog animate-box" style="max-width: 350px;">
+						<img src="images/projets/listeEtudiant-Copie.png" alt="SAE Poursuite d'études" class="project-image img-responsive">
 						<div class="blog-text">
 							<span class="posted_on">2024</span>
-							<h3>Gestion d'Avis de Poursuite d'Étude</h3>
-							<p>Application web développée dans le cadre d'un projet en 2ème année d'IUT. Gestion complète des avis et automatisation du processus.</p>
+							<h3>SAE Poursuite d'études</h3>
+							<p>Dans le cadre de ma deuxième année de BUT, j'ai participé à la création d'une application web permettant de suivre et gérer les parcours académiques des étudiants, avec une gestion de données avancée et une interface intuitive.</p>
 							<ul class="stuff">
 								<li><i class="icon-code"></i>PHP</li>
 								<li><i class="icon-database"></i>SQL</li>
-								<li><a href="#">En savoir plus<i class="icon-arrow-right22"></i></a></li>
+								<li><a href="SAE%20poursuite%20d'études.html">En savoir plus <i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="fh5co-blog animate-box">
+				<!-- Projet 2 -->
+				<div class="col-md-4 d-flex justify-content-center">
+					<div class="fh5co-blog animate-box" style="max-width: 350px;">
+						<img src="images/projets/trainIHM-Copie.png" alt="SAE Trains" class="project-image img-responsive">
 						<div class="blog-text">
-							<span class="posted_on">2023</span>
-							<h3>Jeu de Plateau "Trains"</h3>
-							<p>Développement d'un jeu de plateau en Java dans le cadre d'un projet de 1ère année d'IUT. Implémentation des règles et interface graphique.</p>
+							<span class="posted_on">2024</span>
+							<h3>SAE Trains</h3>
+							<p>Ce projet en binôme visait à créer une version numérique du jeu de société Trains, en utilisant Java et JavaFX pour gérer l'interface graphique et les mécanismes du jeu, tout en offrant une expérience multijoueur locale sur un même appareil.</p>
 							<ul class="stuff">
 								<li><i class="icon-code"></i>Java</li>
-								<li><i class="icon-gamepad"></i>GUI</li>
-								<li><a href="#">En savoir plus<i class="icon-arrow-right22"></i></a></li>
+								<li><i class="icon-gamepad"></i>JavaFX</li>
+								<li><a href="SAE%20trains.html">En savoir plus <i class="icon-arrow-right22"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+				<!-- Projet 3 -->
+				<div class="col-md-4 d-flex justify-content-center">
+					<div class="fh5co-blog animate-box" style="max-width: 350px;">
+						<img src="images/projets/E3C-Copie.png" alt="SAE E3C" class="project-image img-responsive">
+						<div class="blog-text">
+							<span class="posted_on">2023-2024</span>
+							<h3>SAE E3C</h3>
+							<p>Développement d'une application Java permettant de jouer au jeu de cartes "Set!" en solo ou avec une IA. Cette application intègre des algorithmes avancés pour la détection des sets et propose un mode compétitif avec l'ordinateur.</p>
+							<ul class="stuff">
+								<li><i class="icon-code"></i>Java</li>
+								<li><i class="icon-code"></i>JavaFX</li>
+								<li><i class="icon-brain"></i>IA</li>
+								<li><a href="SAE%20E3C.html">En savoir plus <i class="icon-arrow-right22"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Projet 4 -->
+				<div class="col-md-4 d-flex justify-content-center">
+					<div class="fh5co-blog animate-box" style="max-width: 350px;">
+						<img src="images/projets/sudoku-Copie.png" alt="SAE Sudoku" class="project-image img-responsive">
+						<div class="blog-text">
+							<span class="posted_on">2023</span>
+							<h3>SAE Sudoku</h3>
+							<p>Mon premier projet en BUT, consistant à recréer un jeu de Sudoku en Java où le joueur affronte une IA capable de résoudre des grilles complexes. Ce projet a permis d'explorer l'algorithmique de résolution de jeux et l'intelligence artificielle de manière pratique.</p>
+							<ul class="stuff">
+								<li><i class="icon-code"></i>Java</li>
+								<li><i class="icon-brain"></i>IA</li>
+								<li><a href="SAE%20Sudoku.html">En savoir plus <i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -141,42 +226,80 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+
 </div>
 
-	<div id="skills" class=" text-center" style=" padding: 20px 0;">
-    <div class="container">
-        <div class="row animate-box">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2 class="title-effect section-title" style="color: #d34f00">Compétences</h2>
-                <p style="color: #ae6f00">Voici un aperçu de mes compétences techniques et des langages de programmation que je maîtrise.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3 style="color: #D34F00FF">Développement Web</h3>
-                        <ul class="skills-list text-left">
-                            <li><i class="icon-check"></i> HTML</li>
-                            <li><i class="icon-check"></i> CSS</li>
-                            <li><i class="icon-check"></i> JavaScript</li>
-                            <li><i class="icon-check"></i> PHP</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h3 style="color: #D34F00FF">Autres Compétences</h3>
-                        <ul class="skills-list text-left">
-                            <li><i class="icon-check"></i> Java</li>
-                            <li><i class="icon-check"></i> Python</li>
-                            <li><i class="icon-check"></i> SQL/PLSQL</li>
-                            <li><i class="icon-check"></i> GIT/Github</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div id="skills" class="text-center" style="padding: 20px 0;">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h2 class="title-effect section-title" style="color: #d34f00">Compétences</h2>
+				<p style="color: #ae6f00">Voici un aperçu de mes compétences techniques et des langages de programmation que je maîtrise.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h3 style="color: #D34F00FF">Développement Web</h3>
+				<ul class="skills-list text-left">
+					<li>HTML/CSS
+						<div class="progress">
+							<div class="progress-bar" style="width: 90%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+					<li>JavaScript
+						<div class="progress">
+							<div class="progress-bar" style="width: 60%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+					<li>PHP
+						<div class="progress">
+							<div class="progress-bar" style="width: 80%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+					<li>SQL
+						<div class="progress">
+							<div class="progress-bar" style="width: 70%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<h3 style="color: #D34F00FF">Autres Compétences</h3>
+				<ul class="skills-list text-left">
+					<li>Java
+						<div class="progress">
+							<div class="progress-bar" style="width: 90%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+					<li>Python
+						<div class="progress">
+							<div class="progress-bar" style="width: 70%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+					<li>C
+						<div class="progress">
+							<div class="progress-bar" style="width: 60%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+					<li>Bash
+						<div class="progress">
+							<div class="progress-bar" style="width: 60%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+					<li>GIT/Github
+						<div class="progress">
+							<div class="progress-bar" style="width: 90%; background-color: #DD356E;"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
+</div>
 
 	<div id="experience" class="text-center" style=" padding: 20px 0;">
 	<div class="fh5co-wireframe">

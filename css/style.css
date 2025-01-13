@@ -1765,4 +1765,61 @@ input[type="text"] {
   font-size: 20px; /* Taille de l'icône */
 }
 
+.progress {
+  background-color: #e0e0e0; /* Couleur de fond de la barre de progression */
+  border-radius: 5px;
+  height: 20px; /* Hauteur de la barre de progression */
+  margin-bottom: 15px; /* Espacement entre les éléments */
+}
+
+.progress-bar {
+  height: 100%; /* Hauteur de la barre de progression */
+  border-radius: 5px; /* Coins arrondis */
+  transition: width 0.4s ease; /* Animation lors du changement de largeur */
+}
+
+.image-container {
+  text-align: center; /* Centre les éléments */
+}
+
+/* Image principale affichée par défaut */
+.responsive-img {
+  width: 100%;
+  max-width: 1800px; /* Très grande image pour les grands écrans */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contenu alternatif masqué par défaut */
+.alternate-content {
+  display: none;
+}
+
+/* Lorsque la largeur d'écran est petite (moins de 800px dans cet exemple) */
+@media screen and (max-width: 800px) {
+  .responsive-img {
+    display: none; /* Masque l'image principale */
+  }
+
+  .alternate-content {
+    display: block; /* Affiche l'image alternative et le texte */
+  }
+
+  .alternate-content img {
+    width: 100%; /* L'image alternative s'adapte au conteneur */
+    max-width: 600px; /* Largeur maximale pour éviter qu'elle soit trop grande */
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .alternate-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
