@@ -407,6 +407,18 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 0;
   padding-top: 0;
 }
+
+#skills {
+  background: #FEE856;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#experience {
+  background: #d5577a;
+  margin-top: 0;
+  padding-top: 0;
+}
 #fh5co-features .services-padding {
   padding: 4em 0;
 }
@@ -1683,16 +1695,18 @@ input[type="text"] {
 }
 
 .experience-title {
+  color: white;
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
 
 .experience-details {
-  color: #666;
+  color: #cccccc;
   margin-bottom: 0.5em;
 }
 
 .experience-description {
+  color: #ededed;
   line-height: 1.6;
 }
 
@@ -1727,9 +1741,9 @@ input[type="text"] {
   margin-top: 3rem;
 }
 
-#fh5co-skills {
+.fh5co-skills {
   background: #FEE856; /* Couleur de fond pour la section */
-  padding: 4em 0; /* Espacement vertical */
+  padding: 0em 0; /* Espacement vertical */
 }
 
 .skills-list {
